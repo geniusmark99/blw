@@ -1,0 +1,240 @@
+*,
+*,
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body:has(main#fx-main) {
+    overflow: hidden !important;
+}
+
+main#fx-main {
+    overflow: hidden !important;
+}
+
+body.overflow-hidden #main-content {
+    overflow: hidden !important;
+}
+
+main#fx-main {
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: 50 50;
+}
+
+main#fx-main>header {
+    --pd: 8px 15px;
+    align-items: center;
+    display: flex;
+    padding: var(--pd);
+    justify-content: space-between;
+    box-shadow: var(--shadow-md);
+    background-color: var(--light-header-bg);
+    border-bottom: 2px solid var(--border-color-header);
+}
+
+header #fx-logo-content,
+header #fx-profile {
+    display: flex;
+    background-color: var(--bg);
+    align-items: center;
+    gap: 0 var(--gap-y, 10px);
+
+}
+
+#mob-hamburger {
+    display: var(--d, block);
+    width: 50px;
+    height: 50px;
+}
+
+#fx-user-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    font-size: var(--ft-sz, 80%);
+}
+
+#fx-user-amount .user-amount-desc {
+    color: var(--light-txt-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#fx-user-amount .user-amount-no {
+    color: var(--orange-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-stretch: semi-condensed;
+    font-weight: 500;
+    font-size: var(--ft-sz, 18px);
+    letter-spacing: 0.5px;
+}
+
+#fx-user-profile svg {
+    width: var(--wh, 50px);
+    height: var(--wh, 50px);
+    fill: var(--svg-fill-light);
+}
+
+#fx-logo img {
+    width: var(--w, 100px);
+    object-fit: cover;
+}
+
+
+
+/*********  MAIN CONTENT  *********/
+#fx-content {
+    display: flex;
+}
+
+#fx-content #sidebar {
+    justify-content: center;
+    padding-top: 30px;
+    /* --d: flex !important; */
+    display: var(--d, none);
+    background-color: var(--light-header-bg);
+    height: 100vh;
+    width: var(--w, 100px) !important;
+    border-right: 0.5px solid var(--border-color-header);
+    position: var(--pos, absolute);
+    z-index: 1000;
+}
+
+#fx-content #sidebar.show {
+    --d: flex !important;
+}
+
+#sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: calc(100vh - 20%);
+
+}
+
+
+#sidebar ul li a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--light-txt-color-2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    gap: 2px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+@media (hover:hover) {
+    #sidebar ul li a:hover::after {
+        position: absolute;
+        content: "";
+        background-color: var(--active-link);
+        height: 100%;
+        width: 5px;
+        right: -1px;
+        transition: 1s background-color;
+    }
+}
+
+#sidebar ul li a.active::after {
+    position: absolute;
+    content: "";
+    background-color: var(--active-link);
+    height: 100%;
+    width: 5px;
+    right: -1px;
+}
+
+
+#sidebar ul li a .icon svg {
+    width: var(--svg-wh, 25px);
+    height: var(--svg-wh, 25px);
+}
+
+body[dark-mode] #main-content {
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: 50 50;
+}
+
+#main-content {
+    height: 89vh;
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+#main-content::-webkit-scrollbar {
+    background-color: var(--light-txt-color-2);
+    width: 8px;
+}
+
+#main-content::-webkit-scrollbar-thumb {
+    background-color: var(--light-header-bg);
+    height: 20px;
+    width: 2px;
+    border-radius: 2px;
+}
+
+#main-content-inner {
+    height: var(--main-content-h, calc(100vh - 20%));
+    padding: 20px 10px;
+}
+
+.icon-div {
+display: flex;
+gap:0 20px;
+align-items: center;
+justify-content: center;
+}
+
+.icon-div:has(svg) svg {
+width: 25px;
+height: 25px;
+}
+
+
+/********* END OF  MAIN CONTENT  *********/
+
+
+@media screen and (min-width: 900px) {
+    main#fx-main>header {
+        --pd: 8px 20px;
+    }
+
+    #fx-user-amount {
+        --ft-sz: 100%;
+    }
+
+    #mob-hamburger {
+        --d: none;
+    }
+
+
+    #fx-logo img {
+        --w: 150px;
+    }
+
+    #fx-content #sidebar {
+        --d: flex;
+        --w: 150px;
+        --pos: relative;
+    }
+
+    #fx-content #sidebar.show {
+        --d: none;
+    }
+
+    #sidebar ul li a .icon svg {
+        --svg-wh: 28px;
+    }
+
+}

@@ -1,0 +1,213 @@
+main.form-content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.form-content {
+    /* height: calc(100vh - 20%); */
+    width: calc(100%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+
+.form-top-content {
+    /* height: 100px; */
+    margin-top: 10px;
+    margin-bottom: 90px;
+    display: inline-flex;
+    justify-content: center;
+
+}
+
+.form-top-content img {
+    width: 30%;
+}
+
+.form-bottom-content {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innner-form-bottom-content {
+    width: var(--form-bottom-w, 280px);
+    display: flex;
+    justify-content: center;
+}
+
+
+.form-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    height: inherit;
+    width: 100%;
+    border-top: 5px solid #EA2440;
+    background-color: #222642;
+    color: #fff;
+    padding: 20px;
+}
+
+.back-arrow img {
+    width: var(--back-wh, 20px);
+    height: var(--back-wh, 20px);
+}
+
+.form-main-inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+
+.form-main-inner-container .google-signup-link {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: #282C49;
+    border-radius: 5px;
+    padding: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.google-signup-sub {
+    color: #ccc;
+}
+
+.google-signup-sub img {
+    --wh: 20px;
+    width: var(--wh);
+    height: var(--wh);
+}
+
+.form-main-inner-container form#form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px 0;
+    justify-content: center;
+}
+
+
+form#form-input label.extra-label {
+    align-items: center;
+    gap: 0 10px;
+    display: flex;
+    width: inherit;
+}
+
+label.extra-label .btn-password {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn-password svg {
+    width: 20px;
+    height: 20px;
+    fill: #7479a9;
+}
+
+
+.btn-password:hover svg {
+    fill: #7479a9;
+}
+
+form#form-input label.extra-label input {
+    width: 80%;
+}
+
+
+
+form#form-input input {
+    padding: 10px 8px;
+    color: #fff;
+    font-size: var(--input-ft-sz, 14px);
+    background-color: #282C49;
+    border-radius: 5px;
+
+}
+
+form#form-input input:focus {
+    outline: none;
+    background-color: #282C49;
+    border-color: #3f456d;
+}
+
+.form-input-bottom {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: var(--ft-sz, 12px);
+    white-space: nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.remember-me {
+    color: #ccc;
+}
+
+
+.form-input-bottom a {
+    text-decoration: none;
+    color: #455692;
+    white-space: nowrap;
+}
+
+.form-input-bottom a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form-btn-submit-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.form-btn-submit {
+    margin-top: 40px;
+    width: 50%;
+    background-color: #EA2440;
+    cursor: pointer;
+    color: #fff;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width:500px) {
+
+    .innner-form-bottom-content {
+        --form-bottom-w: 400px;
+    }
+
+    .form-top-content img {
+        width: 120px;
+    }
+
+    .form-input-bottom {
+        --ft-sz: 16px;
+    }
+
+    form#form-input input {
+        --input-ft-sz: 16px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .innner-form-bottom-content {
+        --form-bottom-w: 500px;
+    }
+
+    .google-signup-sub img {
+        --wh: 30px;
+    }
+}

@@ -1,0 +1,238 @@
+#main-content-inner {
+    --main-content-h: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--g, 20px);
+    margin-bottom: 50px;
+}
+
+.home-page-content {
+    display: flex;
+    flex-direction: var(--flex-dir, column);
+    gap: var(--g, 10px 0);
+}
+
+.home-page-content.two {
+    --flex-dir: column-reverse;
+}
+
+.home-page-content-sub {
+    background-color: var(--light-bg);
+    border: 1px solid var(--light-bor-color);
+    border-radius: 20px;
+    height: var(--h, 300px);
+    box-shadow: var(--shadow-lg);
+}
+
+.home-page-content-sub.two {
+    --h: auto;
+    /* padding: 20px; */
+    justify-content: center;
+}
+
+.home-page-content-sub .home-title {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--home-title-bg);
+    text-transform: uppercase;
+    color: #606060;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: var(--pd, 20px);
+    font-size: var(--ft-sz, 14px);
+}
+
+.home-page-content-sub.two .home-title {
+    /* --home-title-bg: #1E1E1E; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-lg), var(--shadow-lg);
+}
+
+.home-page-content-sub .home-title-img {
+    background: url('../images/Chart-example.png');
+    background-size: contain;
+    height: var(--home-img-h, calc(300px - 60px));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+.home-title-extra {
+    display: flex;
+    flex-direction: var(--f-dir, column);
+    gap: var(--g, 10px 0);
+    height: auto;
+    width: 100%;
+    justify-content: var(--just-cont, center);
+    padding: 10px 20px;
+    font-size: var(--ft-sz, 100%);
+
+}
+
+.home-title-extra.trusted-brokers-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--g, 50px 0);
+}
+
+.home-title-extra.trusted-brokers-sub .broker-images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-title-extra.trusted-brokers-sub .broker-images img {
+    max-width: 80%;
+}
+
+.home-title-extra.trading-history {
+    --f-dir: column;
+    gap: 20px;
+}
+
+.trading-history-sub {
+    color: var(--col);
+    display: flex;
+    flex-direction: var(--trading-flex-dir, column);
+    background: linear-gradient(to left, var(--grad-1), var(--grad-2));
+    border-radius: 8px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.trading-history-sub.one {
+    --col: white;
+    --grad-1: var(--grad-blue-1);
+    --grad-2: var(--grad-blue-2);
+}
+
+.trading-history-sub.two {
+    --col: black;
+    --grad-1: var(--grad-lemon-1);
+    --grad-2: var(--grad-lemon-2);
+}
+
+.trading-history-sub.three {
+    --col: white;
+    --grad-1: var(--grad-pink-1);
+    --grad-2: var(--grad-pink-2);
+}
+
+.trading-history-one,
+.trading-history-two {
+    align-items: center;
+    display: flex;
+    gap: 0 20px;
+
+}
+
+/* .trading-history-one,
+.trading-history-two {
+} */
+
+.trading-history-two .open {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grad-loading-img {
+    background-color: #3B435A;
+    width: 80px;
+    height: 6px;
+}
+
+.grad-loading-img .inner-gradient-linear {
+    background: linear-gradient(to left, #1B6DBF, #1B6DBF, #02F5FA);
+    width: 40px;
+    height: 6px;
+}
+
+
+.home-title-extra-sub {
+    display: flex;
+    flex-direction: var(--f-dir);
+    gap: var(--g, 0 20px);
+    width: var(--w, auto);
+    justify-content: var(--just-cont, space-evenly);
+}
+
+.home-inner-percent {
+    display: flex;
+    gap: 0 10px;
+}
+
+.home-inner-extra-sub {
+    background: linear-gradient(to top, var(--grad-bg-1), var(--grad-bg-2));
+    border-radius: 15px;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 80%;
+}
+
+.home-inner-extra-sub .home-inner-percent {
+    color: var(--color-inner);
+}
+
+.home-inner-extra-sub.one {
+    --color-inner: #0D64C3;
+    --grad-bg-1: var(--grad-blue-1);
+    --grad-bg-2: var(--grad-blue-2);
+}
+
+.home-inner-extra-sub.two {
+    --color-inner: #00FE6A;
+    --grad-bg-1: var(--grad-pink-1);
+    --grad-bg-2: var(--grad-pink-2);
+}
+
+
+.home-inner-extra-sub.three {
+    --color-inner: #9D48AE;
+    --grad-bg-1: var(--grad-lemon-1);
+    --grad-bg-2: var(--grad-lemon-2);
+}
+
+
+
+
+@media screen and (min-width: 900px) {
+    .home-page-content {
+        --flex-dir: row;
+        --g: 0 20px;
+        justify-content: space-between;
+    }
+
+    .home-page-content.two {
+        --flex-dir: row;
+    }
+
+    .home-page-content>* {
+        width: 50%;
+    }
+
+    .home-title-extra {
+        --f-dir: row;
+        --ft-sz: 80%;
+    }
+
+    .home-title-extra-sub {
+        --f-dir: column;
+        --g: 10px 0;
+        --w: 30%;
+    }
+
+    .trading-history-sub {
+        --trading-flex-dir: row;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .home-title-extra {
+        --ft-sz: 90%;
+    }
+}

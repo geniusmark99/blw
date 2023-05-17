@@ -1,0 +1,108 @@
+#quotes-main {
+    background-color: var(--light-bg);
+    border: 1px solid var(--light-bor-color);
+    border-radius: 20px;
+    /* height: var(--h, 300px); */
+    box-shadow: var(--shadow-lg);
+}
+
+
+#quotes-main .quotes-title {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--home-title-bg);
+    text-transform: uppercase;
+    color: #606060;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: var(--pd, 20px);
+    font-size: var(--ft-sz, 14px);
+}
+
+.quotes-main-extra {
+    display: flex;
+    flex-direction: var(--f-dir, column);
+    gap: var(--g, 0 10px);
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    justify-content: var(--just-cont, center);
+    padding: 10px 20px;
+    font-size: var(--ft-sz, 100%);
+}
+
+.quotes-main-extra-sub {
+    display: flex;
+    flex-direction: var(--f-dir);
+    gap: var(--g, 0 20px);
+    padding: 10px 20px;
+    justify-content: var(--just-cont, space-evenly);
+    width: 100%;
+}
+
+.quote-inner-extra-sub {
+    background: linear-gradient(to top, var(--grad-bg-1), var(--grad-bg-2));
+    border-radius: 15px;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 80%;
+    width: var(--extra-w, 100%);
+    text-align: center;
+}
+
+.quote-inner-extra-sub .quote-inner-percent {
+    color: var(--color-inner);
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.quote-inner-extra-sub h3,
+.quote-inner-extra-sub>div {
+    color: var(--all-col);
+}
+
+.quote-inner-extra-sub.one {
+    --all-col: #fff;
+    --color-inner: #0D64C3;
+    --grad-bg-1: var(--grad-blue-1);
+    --grad-bg-2: var(--grad-blue-2);
+}
+
+.quote-inner-extra-sub.two {
+    --all-col: #fff;
+    --color-inner: #00FE6A;
+    --grad-bg-1: var(--grad-pink-1);
+    --grad-bg-2: var(--grad-pink-2);
+}
+
+.quote-inner-extra-sub.three {
+    --all-col: #fff;
+    --color-inner: #0D64C3;
+    --grad-bg-1: var(--grad-lemon-1);
+    --grad-bg-2: var(--grad-lemon-2);
+}
+
+
+@media screen and (max-width:900px) {
+    #quotes-main .quotes-main-extra {
+        --f-dir: row;
+        --ft-sz: 80%;
+        --g: 10px 5px;
+
+    }
+
+    .quotes-main-extra-sub {
+        --f-dir: column;
+        --g: 10px 0;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #quotes-main .quotes-main-extra {
+        --ft-sz: 90%;
+        --g: 20px 10px;
+
+    }
+}

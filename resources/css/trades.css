@@ -1,0 +1,301 @@
+#trades-content {
+    display: flex;
+    flex-direction: var(--flex-dir, column);
+    gap: var(--g, 20px 10px);
+}
+
+.trades-content-top {
+    position: relative;
+}
+
+.trades-content-top .btn {
+    background-color: var(--light-bg);
+    border-radius: 5px;
+    border: 1px solid var(--light-bg);
+    cursor: pointer;
+    display: var(--dis, block);
+    padding: 10px 10px;
+}
+
+
+.trades-content-top .btn:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.trades-content-top .btn>svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.arrow-directions {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: var(--dark-bg);
+    color: var(--light-txt);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+
+.arrow-directions.left {
+    left: 0;
+}
+
+.arrow-directions.right {
+    right: 0;
+}
+
+.trades-ul {
+    align-items: center;
+    background-color: var(--ul-bg, var(--light-bg));
+    border-radius: 5px;
+    display: var(--ul-dis, none);
+    flex-direction: column;
+    list-style-type: none;
+    gap: var(--ul-gap, 20px 10px);
+    width: var(--ul-w, 200px);
+    overflow: hidden;
+    padding: var(--ul-pd, 10px);
+    position: var(--pos, absolute);
+}
+
+.trades-ul.show {
+    --ul-dis: flex;
+}
+
+.trades-ul li {
+    --grad-col-1: none;
+    --grad-col-2: none;
+    background: linear-gradient(to top, var(--grad-bg-1), var(--grad-bg-2));
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 5px 0;
+    width: var(--li-w, 150px);
+    text-align: center;
+    padding: var(--li-pd, 6px 10px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trades-ul li .trade-li-1 {
+    color: var(--grad-col-1);
+}
+
+.trades-ul li .trade-li-2 {
+    color: var(--grad-col-2);
+}
+
+.trades-ul li.blue-grad {
+    --grad-bg-1: var(--grad-blue-1);
+    --grad-bg-2: var(--grad-blue-2);
+}
+
+.trades-ul li.pink-grad {
+    --grad-col-1: #fff;
+    --grad-col-2: #00FC69;
+    --grad-bg-1: var(--grad-pink-1);
+    --grad-bg-2: var(--grad-pink-2);
+}
+
+.trades-ul li.lemon-grad {
+    --grad-bg-1: var(--grad-lemon-1);
+    --grad-bg-2: var(--grad-lemon-2);
+}
+
+/* trades-content-bottom */
+.trades-content-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    margin-bottom: 30px;
+}
+
+.trades-content-bottom-sub.top {
+    background-color: var(--light-bg);
+    border: 1px solid var(--light-bor-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    /* width: 100%; */
+}
+
+.trades-content-bottom-sub.top .trade-title {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--home-title-bg);
+    text-transform: uppercase;
+    color: #606060;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: var(--pd, 20px);
+    font-size: var(--ft-sz, 14px);
+}
+
+.trades-content-bottom-sub.top ul {
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 0 20px;
+    /* background-color: red; */
+    color: #fff;
+
+}
+
+.trade-main-content {
+    flex-direction: var(--f-dir, column);
+    background: linear-gradient(-270deg, var(--grad-pink-1), var(--grad-pink-2));
+    display: flex;
+    gap: var(--g, 0 10px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: var(--ft-sz, 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 300px;
+}
+
+.trade-main-content-sub {
+    width: var(--w, 100%);
+}
+
+.trade-main-content-sub.top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.trade-main-content-sub.top h2 {
+    color: var(--grad-blue-2);
+}
+
+.trade-stop-loss {
+    align-items: center;
+    gap: 0 10px;
+    display: flex;
+    width: 100%;
+    margin: 20px;
+}
+
+.trade-stop-loss .input-stop-loss {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    /* gap: 10px 0; */
+    width: var(--input-w, 50%);
+}
+
+.trade-stop-loss .input-stop-loss span {
+    color: var(--col);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.input-stop-loss input {
+    height: calc(40px - 30px);
+    border-radius: 20px;
+    padding: 20px 10px;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.trade-main-content-sub.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.bottom-inner {
+    display: flex;
+    gap: var(--gap, 0 20px);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: var(--flex-dir);
+}
+
+.bottom-inner .bottom-btn {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, var(--btn-grad-1), var(--btn-grad-1), var(--btn-grad-2));
+    color: var(--btn-col);
+    font-size: var(-ft-sz, 20px);
+    font-weight: 500;
+}
+
+.bottom-inner .bottom-btn:focus {
+    outline: 1px solid currentColor;
+}
+
+.bottom-inner .bottom-btn.one {
+    --btn-col: #fff;
+    --btn-grad-1: #A41C5A;
+    --btn-grad-2: #E62B74;
+}
+
+.bottom-inner .bottom-btn.two {
+    --btn-col: #002214;
+    --btn-grad-1: #00FD5F;
+    --btn-grad-2: #00EFB0;
+}
+
+.trades-content-bottom-sub.bottom {}
+
+.trades-content-bottom-sub.bottom img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+/* End of trades-content-bottom */
+
+@media screen and (min-width:900px) {
+    .trade-main-content {
+        --f-dir: row;
+        justify-content: center;
+    }
+
+    #trades-content {
+        --flex-dir: row;
+        --g: 0 20px;
+    }
+
+    .trades-ul {
+        --bg: none;
+        --ul-w: 100%;
+    }
+
+    .trades-ul,
+    .trades-ul.show {
+        display: var(--ul-dis, flex);
+        --pos: relative;
+    }
+
+    .trades-content-top .btn {
+        --dis: none;
+    }
+
+    .trades-ul li {
+        --li-w: 200px;
+    }
+
+    .bottom-inner {
+        --flex-dir: column;
+        --gap: 20px 0;
+    }
+}

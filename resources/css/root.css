@@ -1,0 +1,46 @@
+:root {
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+    --shadow-none: 0 0 #0000;
+    --dark-header-bg: #141414;
+    --light-header-bg: rgb(228 228 231);
+    --light-bg: transparent;
+    --dark-bg: #141414;
+    --dark-txt-color: #ddd;
+    --light-txt-color: #181818;
+    --dark-txt-color-2: #575757;
+    --light-txt-color-2: #181818;
+    --orange-bg: #FF5700;
+    --svg-fill-light: rgb(75 85 99);
+    --svg-fill-dark: #929292;
+    --border-color-header: transparent;
+    --border-color-dark-header: #313131;
+    --active-link: #EA2440;
+    --light-bor-color: #383838;
+    --grad-blue-1: #00D9D8;
+    --grad-blue-2: #00A5F7;
+    --grad-pink-1: #7657FE;
+    --grad-pink-2: #B422FC;
+    --grad-lemon-1: #00FE6A;
+    --grad-lemon-2: #00ECBD;
+    --home-title-bg: #1E1E1E;
+    --red-500: rgb(239 68 68);
+    --red-600: rgb(220 38 38);
+    --green-500: rgb(34 197 94);
+    --green-600: rgb(22 163 74);
+
+}
+
+main#fx-main {
+    --light-header-bg: var(--dark-header-bg);
+    --light-bg: var(--dark-bg);
+    --light-txt-color: var(--dark-txt-color);
+    --light-txt-color-2: var(--dark-txt-color-2);
+    --svg-fill-light: var(--svg-fill-dark);
+    --border-color-header: var(--border-color-dark-header);
+}
